@@ -1,0 +1,63 @@
+//coba_check Pattern
+#include<iostream>
+#include<conio.h>
+#include<windows.h>
+#include<stdio.h>
+using namespace std;
+main()
+{
+	int i,j,n;
+	cout<<"Masukan tinggi Pattern: ";cin>>n;
+	
+	for(i=1;i<=n;i++)
+	{
+		for(j=i;j<n;j++)
+		{
+			if(j%2==0)
+			{
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+				cout<<"BLACK";
+			}
+			else
+			{
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),752);
+				cout<<"WHITE";
+			}
+		}
+		if(j%2!=0)
+		{
+			for(j=n-j;j<i;j++)
+			{
+				if(j%2==0)
+				{
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),752);
+					cout<<"WHITE";
+				}
+				else
+				{
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+					cout<<"BLACK";	
+				}
+			}
+		}
+		else
+		{
+			for(j=n-j-1;j<i-1;j++)
+			{
+				if(j%2==0)
+				{
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),752);
+					cout<<"WHITE";
+				}
+				else
+				{
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+					cout<<"BLACK";	
+				}
+			}
+		}
+		cout<<endl;
+	}
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+	cout<<endl;
+}

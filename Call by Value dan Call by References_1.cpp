@@ -1,0 +1,16 @@
+//Call by Value dan Call by References
+#include<iostream>
+using namespace std;
+
+int sqr(int x)
+{
+	x=x*x;
+	return(x);
+}
+
+int main(void)
+{
+	int t=10;
+	cout<<sqr(t)<<","<<t<<endl;
+	return 0;
+}
